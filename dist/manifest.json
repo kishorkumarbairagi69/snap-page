@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "SnapPage — Full Page Screenshot",
+  "short_name": "SnapPage",
+  "version": "0.1.0",
+  "description": "Capture an full webpage as a screenshot, then edit, save, copy, or export it. Privacy first: everything stays on your device.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SnapPage",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting", "storage", "downloads"],
+  "commands": {
+    "capture-full-page": {
+      "suggested_key": {
+        "default": "Alt+Shift+P"
+      },
+      "description": "Capture the full page"
+    }
+  },
+  "options_page": "options.html",
+  "minimum_chrome_version": "102"
+}
